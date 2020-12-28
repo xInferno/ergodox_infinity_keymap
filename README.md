@@ -18,13 +18,13 @@ Base Layers
 
 ## Building and flashing
 
-1. If you've reset the EEPROM you have to reflash each side:
-  1. Plug in the left half and flash it with `make ergodox_infinity:default:dfu-util-split-left`
-  2. Hit the top vertical 1.5U key (second from the top in the rightmost column) once, and then hit the bottom left 1U key
-  3. Plug in the right half and flash with `make ergodox_infinity:default:dfu-util-split-right`
-  4. Hit the top vertical 1.5U key (second from the top in the leftmost column) once, and then hit the bottom right 1U key
-  5. Make sure to put `#define EE_HANDS` to your config.h in the keymap folder
-2. If you're only doing a simple keymap change, you can just flash one half of the keyboard:
-  1. Put the keyboard into flash mode
-  2. Run `qmk flash` (this assumes you've set up the qmk command already)
+* If you've reset the EEPROM you have to reflash each side:
+  * Plug in the left half and flash it with `make ergodox_infinity:default:dfu-util-split-left`
+  * Hit the top vertical 1.5U key (second from the top in the rightmost column) once, and then hit the bottom left 1U key
+  * Plug in the right half and flash with `make ergodox_infinity:default:dfu-util-split-right`
+  * Hit the top vertical 1.5U key (second from the top in the leftmost column) once, and then hit the bottom right 1U key
+  * Make sure to put `#define EE_HANDS` to your config.h in the keymap folder
+* If you're only doing a simple keymap change, you can just flash one half of the keyboard:
+  * Put the keyboard into flash mode
+  * Run `qmk flash` (this assumes you've set up the qmk command already)
 
