@@ -2,6 +2,7 @@
 
 enum custom_layers {
   _BASE,
-  _FUNC,
+  _GAME,
+  _NAV,
   _NUM,
 };

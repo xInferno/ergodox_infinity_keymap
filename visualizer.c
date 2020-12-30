@@ -22,11 +22,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // stopped. This can be done by either double buffering it or by using constant strings
 static void get_visualizer_layer_and_color(visualizer_state_t* state) {
     uint8_t saturation = 255;
-    uint8_t brightness = 0;
+    uint8_t brightness = 50;
     switch(biton32(state->status.layer)) {
-      case _FUNC:
-        state->target_lcd_color = LCD_COLOR(0, saturation, 255);
-        state->layer_text = "Function";
+      case _NAV:
+        state->target_lcd_color = LCD_COLOR(140, saturation, 255);
+        state->layer_text = "Nav/Func/Media";
 	break;
       case _NUM:
 	state->target_lcd_color = LCD_COLOR(168, saturation, 255);
@@ -36,8 +36,12 @@ static void get_visualizer_layer_and_color(visualizer_state_t* state) {
         state->target_lcd_color = LCD_COLOR(84, saturation, brightness);
         state->layer_text = "Base";
 	break;
+      case _GAME:
+        state->target_lcd_color = LCD_COLOR(203, saturation, brightness);
+        state->layer_text = "Game";
+	break;
       default:
-	state->target_lcd_color = LCD_COLOR(0, saturation, 255);
+	state->target_lcd_color = LCD_COLOR(255, saturation, 255);
 	state->layer_text = "NONE ERROR";
 	break;
     }
